@@ -2,21 +2,32 @@
 <html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Team Lucci v 001</title>
+    <title>Design Team Lucci</title>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: 'Teko', sans-serif;
             margin: 0;
             padding: 0;
-            background: #F8F8F3;
-            color: #0d0f0e;
+            background-color: #f8f8f4;
+            font-family: 'Teko', sans-serif;
+            color: #111;
+        }
+
+        .centered-logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #f8f8f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 1s ease-out;
+            z-index: 10;
         }
 
         .centered-logo.fade-out {
@@ -24,231 +35,150 @@
             pointer-events: none;
         }
 
-        .centered-logo img {
+        .logo-img {
             max-width: 300px;
-            cursor: pointer;
+            height: auto;
         }
 
-        .hidden {
-            display: none;
-        }
-
-        nav {
-            background: #000;
-            padding: 1em;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
-            margin: 0 1em;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .page {
-            padding: 2em;
+        .main-content {
+            padding: 2rem;
             max-width: 900px;
-            margin: auto;
-            opacity: 0;
+            margin: 0 auto;
+            display: none;
+            animation: fadeIn 1.5s ease forwards;
         }
 
-        .logo {
-            display: block;
-            max-width: 300px;
-            margin: 3em auto;
-        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-        .page.show {
-            opacity: 1;
-            transition: opacity 1s ease-in;
-        }
-
-        .page.delay-1 {
-            transition-delay: 0.3s;
-        }
-
-        .page.delay-2 {
-            transition-delay: 0.6s;
+            to {
+                opacity: 1;
+            }
         }
 
         h1,
         h2,
-        h3 {
-            margin-top: 1.5em;
+        h3,
+        h4 {
+            margin-bottom: 0.2em;
+        }
+
+        section {
+            margin-bottom: 3rem;
         }
 
         hr {
+            margin: 2rem 0;
             border: none;
-            border-top: 2px solid #111;
-            margin: 2em 0;
-        }
-
-        .work-sample {
-            margin: 2em 0;
-            text-align: center;
-        }
-
-        .work-sample img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 1em;
-        }
-
-        .work-sample a {
-            display: block;
-            margin-top: 0.5em;
-            color: #0066cc;
-            text-decoration: none;
+            border-top: 1px solid #ccc;
         }
 
         form input,
-        form textarea,
-        form button {
-            font-family: 'Teko', sans-serif;
+        form textarea {
             width: 100%;
-            padding: 0.75em;
-            margin-top: 1em;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 4px;
+            font-family: 'Teko', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        form button {
+            background-color: #111;
+            color: #fff;
+            padding: 0.6rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'Teko', sans-serif;
         }
     </style>
 </head>
 
 <body>
-
-    <div id="intro-logo" class="centered-logo">
-        <img src="316123D1-573E-406A-9B42-59D0C5D5E758.PNG" alt="Design Team Lucci Logo" onclick="enterSite()">
+    <div class="centered-logo" id="logo">
+        <img src="316123D1-573E-406A-9B42-59D0C5D5E758.PNG" alt="Design Team Lucci Logo" class="logo-img">
     </div>
 
-    <div id="main-content" class="hidden">
-        <nav>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <section id="portfolio" class="page delay-1">
-            <img src="316123D1-573E-406A-9B42-59D0C5D5E758.PNG" alt="Design Team Lucci Logo" class="logo">
+    <div class="main-content" id="content">
+        <section>
             <h1>DESIGN TEAM LUCCI</h1>
-            <h2>BRAD THOMPSON JR.<br>aka Tommy Thompson</h2>
-            <p><strong>Creative Strategist | Designer | Musician | Digital Architect | Social Media Marketing</strong>
-            </p>
-            <p><em>Project PLUS</em></p>
+            <h2>BRAD THOMPSON JR.</h2>
+            <h3>aka Tommy Thompson</h3>
+            <p>Creative Strategist | Designer | Musician | Digital Architect | Social Media Marketing</p>
+            <p><strong>Project PLUS</strong></p>
+        </section>
 
-            <hr>
-
+        <section>
             <h3>INTRODUCTION</h3>
-            <p>Representing Design Team Lucci, I’m Brad Thompson Jr., a multi-disciplinary creative operating at the
-                intersection of design, strategy, music, and emerging tech...</p>
+            <p>Representing Design Team Lucci, I’m Brad Thompson Jr., a multi-disciplinary creative... [full text
+                continues here]</p>
+        </section>
 
-            <div class="work-sample">
-                <p><strong>[Image Placeholder – Introduction Visual]</strong></p>
-                <img src="#" alt="Placeholder for Introduction Work Sample">
-                <a href="#">View Example</a>
-            </div>
-
-            <hr>
-
+        <section>
             <h3>CORE APPROACH: MOBILE-FIRST, PRO-READY</h3>
-            <p>I’m fluent in Photoshop, Illustrator, Final Cut Pro... Mobile isn’t a shortcut—it’s strategy.</p>
+            <p>I’m fluent in Photoshop, Illustrator, Final Cut Pro... [continue]</p>
+        </section>
 
-            <div class="work-sample">
-                <p><strong>[Image Placeholder – Mobile-First Design]</strong></p>
-                <img src="#" alt="Placeholder for Mobile-First Work Sample">
-                <a href="#">View Example</a>
-            </div>
-
-            <hr>
-
+        <section>
             <h3>PROJECT HIGHLIGHT: COUNTUP – The Bag Chasers Collection</h3>
-            <p><strong>Role:</strong> Lead Designer, Brand Strategist, Creative Director</p>
-            <ul>
-                <li>Designed the COUNTUP logo, ‘Chase Racks’ tee, and more</li>
-                <li>Directed production and marketing strategy end-to-end</li>
-            </ul>
+            <p>Role: Lead Designer, Brand Strategist, Creative Director</p>
+            <p>When CountUpD sent me a post teasing his new clothing line... [continue]</p>
+        </section>
 
-            <div class="work-sample">
-                <p><strong>[Image Placeholder – COUNTUP Collection]</strong></p>
-                <img src="#" alt="Placeholder for COUNTUP Collection">
-                <a href="#">View Example</a>
-            </div>
-
-            <hr>
-
+        <section>
             <h3>PROJECT HIGHLIGHT: UNKNOWNPLANETDOTORG</h3>
-            <p><strong>Role:</strong> Founder, Creative Director, Music Producer</p>
-            <ul>
-                <li>Shot music videos with iPhone and AI tools</li>
-                <li>Released indie projects with an artist-first ethos</li>
-            </ul>
+            <p>Role: Founder, Creative Director, Music Producer</p>
+            <p>UNKNOWNPLANETDOTORG is a boutique label... [continue]</p>
+        </section>
 
-            <div class="work-sample">
-                <p><strong>[Image Placeholder – UNKNOWNPLANETDOTORG]</strong></p>
-                <img src="#" alt="Placeholder for UNKNOWNPLANETDOTORG Project">
-                <a href="#">View Example</a>
-            </div>
-
-            <hr>
-
+        <section>
             <h3>MULTI-MEDIA CAPABILITIES</h3>
             <ul>
                 <li>Video editing: Final Cut Pro, CapCut, AI-enhanced footage</li>
-                <li>Audio production: Koala, GarageBand, FruityLoops</li>
-                <li>Graphic design: Photoshop, Procreate Pocket, Illustrator</li>
-                <li>Strategy: Brand decks, rollout planning, social systems</li>
-                <li>Platforms: DistroKid, Bandcamp, Spotify, Apple Music</li>
-                <li>Content: Reels, Shorts, longform scripts</li>
-                <li>AI: Visual storytelling, prompt engineering</li>
-            </ul>
-
-            <hr>
-
-            <h3>PHILOSOPHY</h3>
-            <p>I’m not just trying to go viral. I’m trying to build something real, something that lasts...</p>
-
-            <hr>
-
-            <h3>LOOKING FOR</h3>
-            <ul>
-                <li>Creative direction or freelance roles</li>
-                <li>Music partnerships or label opps</li>
-                <li>Brand collaborations and consulting</li>
-                <li>Paid or equity-based roles to deploy my full skillset</li>
+                <li>Audio production: Koala, GarageBand, FruityLoops...</li>
+                <li>Graphic design: Photoshop, Procreate Pocket...</li>
+                <li>Strategy, Platforms, Content, AI...</li>
             </ul>
         </section>
 
-        <section id="contact" class="page delay-2">
-            <h2>Contact</h2>
-            <p>Want to work with me or ask a question? Drop a message below.</p>
+        <section>
+            <h3>PHILOSOPHY</h3>
+            <p>I’m not just trying to go viral. I’m trying to build something real... [continue]</p>
+        </section>
+
+        <section>
+            <h3>LOOKING FOR</h3>
+            <ul>
+                <li>Creative direction or freelance design roles</li>
+                <li>Music partnerships or label opportunities</li>
+                <li>Strategic brand collaborations</li>
+                <li>Portfolio/media consulting & social strategy</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Contact</h3>
             <form action="mailto:create@designteamlucci.com" method="POST" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Email</button>
+                <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
             </form>
         </section>
     </div>
 
     <script>
-        function enterSite() {
-            const intro = document.getElementById('intro-logo');
-            const main = document.getElementById('main-content');
-
-            intro.classList.add('fade-out');
-
+        window.addEventListener('load', () => {
             setTimeout(() => {
-                intro.style.display = 'none';
-                main.classList.remove('hidden');
-
-                document.querySelectorAll('.page').forEach((section, index) => {
-                    setTimeout(() => {
-                        section.classList.add('show');
-                    }, index * 300);
-                });
-            }, 1000);
-        }
+                document.getElementById('logo').classList.add('fade-out');
+                document.getElementById('content').style.display = 'block';
+            }, 2000);
+        });
     </script>
-
 </body>
 
 </html>
